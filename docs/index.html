@@ -1,16 +1,6 @@
-<html>
-  <head>
-    <title>Webex Widget Demo</title>
-    <link href="./node_modules/@webex/widgets/dist/css/webex-widgets.css" />
-    
-  </head>
-
-  <body>
-    <div id="meeting-widget"></div>
-  <script src="bundle.js"></script>
-  <script>
-  webexMeetingWidget({accesstoken: "NDE2ODIxMWQtYjE5YS00Mjk1LThmNDAtZTAyYTQyNGIxNmMwODUwODRkNTktZDEx_PF84_1eb65fdf-9643-417f-9974-ad72cae0e10f",
-      destination: "https://meet7.webex.com/meet/pr1327211228"});
-</script>
-  </body>
-</html>
+<html><head><title>Webex Widget Demo</title><link href="./node_modules/@webex/widgets/dist/css/webex-widgets.css"/><script defer="defer" src="bundle.js"></script></head><body><div id="meeting-widget"></div><script src="bundle.js"></script><script>webexMeetingWidget({accesstoken: "NDE2ODIxMWQtYjE5YS00Mjk1LThmNDAtZTAyYTQyNGIxNmMwODUwODRkNTktZDEx_PF84_1eb65fdf-9643-417f-9974-ad72cae0e10f",
+      destination: "https://meet7.webex.com/meet/pr1327211228",
+      theme:"light",
+      layout:"Grid",
+      inMeetingControls:['mute-audio','leave-meeting'],
+      notJoinedControls:['join-meeting']});</script></body></html>

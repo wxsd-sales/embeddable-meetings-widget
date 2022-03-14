@@ -30,6 +30,7 @@ function MeetingWidget(props) {
   const layout=props.layout;
   console.log('accesstoken',accesstoken);
   console.log('destination',destination);
+  console.log('theme',theme);
   return (
     
     <div className="WebexMeeting">
