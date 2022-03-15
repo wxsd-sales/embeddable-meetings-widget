@@ -8,29 +8,27 @@
 
 ## Table of Contents
 
-- [CDN](#CDN)
-  - [CDN](#cdn)
-  - [Build from Source](#build-from-source)
-  - [NPM *beta*](#npm)
-    - [Usage with the Webex SDK](#usage-with-webex-sdk)
-- [Usage](#usage)
-  - [Quick Start](#quick-start)
-  - [HTML](#html)
-    - [Data API](#data-api)
-    - [Browser Globals](#browser-globals)
-  - [Events](#events)
-- [Browser Support](#browser-support)
+- [Usage with CDN Link](#usage-with-CDN-links)
+  - [Access Tokens](#access-tokens)
+  - [Meeting Destinations](#meeting-destinations)
+  - [Theme](#theme)
+  - [Remote Video Layout](#remote-video-layout)
+    - [Grid (Default)](#grid)
+    - [Overlay](#overlay)
+    - [Stack](#stack)
+    - [Prominent](#prominent)
+    - [Focus](#focus)
+  - [Customize Meeting Controls](#customize-meeting-controls)
+    - [Meeting Controls when In Meeting](#meeting-controls-when-in-meeting)
+    - [Meeting Controls when Not Joined yet](#meeting-controls-when-not-joined-yet)
 
-## Usage with CDN
+## Usage with CDN Links
 
 Using our CDN requires the least amount of work to get started. Add the following into your HTML file in the head section:
 
 ```html
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://code.s4d.io/widget-recents/latest/main.css">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://code.s4d.io/widget-recents/latest/bundle.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/WXSD-Sales/MeetingWidget/docs/webex-widgets.css" />
+<script src="https://cdn.jsdelivr.net/gh/WXSD-Sales/MeetingWidget/docs/bundle.js"></script>
 ```
 You can then instantiate the widget by providing the following parameters:
 
@@ -38,12 +36,12 @@ You can then instantiate the widget by providing the following parameters:
 <div id="meeting-widget"></div>
 
   <script>
-  webexMeetingWidget({accesstoken: "NDE2ODIxMWQtYjE5YS00Mjk1LThmNDAtZTAyYTQyNGIxNmMwODUwODRkNTktZDEx_PF84_1eb65fdf-9643-417f-9974-ad72cae0e10f",
-      destination: "https://meet7.webex.com/meet/pr1327211228",
-      theme:"light",
-      layout:"Grid",
-      inMeetingControls:['mute-audio','leave-meeting'],
-      notJoinedControls:['join-meeting']});
+  webexMeetingWidget({accesstoken: "ACCESS_TOKEN",
+      destination: "MEETING_DESTINATION",
+      theme:"THEME",
+      layout:"LAYOUT",
+      inMeetingControls:['IN_MEETING_CONTROL1','IN_MEETING_CONTROL2',...],
+      notJoinedControls:['NOT_JOINED_CONTROL1','NOT_JOINED_CONTROL2',...]});
 </script>
 ```
 
@@ -80,15 +78,11 @@ Developers can choose how remote video displays based on the following layouts:
 
 Grid layout divides remote participants in equal segments, giving visibility to a lot of speakers at the same time.
 
-<img src="./images/grid-layout.png" width="300px" alt="Grid layout example" />
-
 Use `layout="grid"` as prop value in Meetings widget.
 
 #### Overlay
 
 Overlay layout displays the active speaker prominently, while overlaying other participants in a strip at the bottom.
-
-<img src="./images/overlay-layout.png" width="300px" alt="Overlay layout example" />
 
 Use `layout="overlay"` as prop value in Meetings widget.
 
@@ -98,15 +92,11 @@ Stack layout is similar to overlay, but instead of displaying other participants
 non-active speakers are placed on top of the active speaker.
 Stacking videos gives full visibility to everyone's video.
 
-<img src="./images/stack-layout.png" width="300px" alt="Stack layout example" />
-
 Use `layout="stack"` as prop value in Meetings widget.
 
 #### Prominent
 
 Prominent layout gives focus to the active speaker and displays other participants around this participant.
-
-<img src="./images/prominent-layout.png" width="300px" alt="Prominent layout example" />
 
 Use `layout="prominent"` as prop value in Meetings widget.
 
@@ -115,8 +105,6 @@ Use `layout="prominent"` as prop value in Meetings widget.
 Focus layout gives all visibility to the active speaker.
 All other participants are not displayed until they speak, who then would take over as active speaker.
 
-<img src="./images/focus-layout.png" width="300px" alt="Prominent layout example" />
-
 Use `layout="focus"` as prop value in Meetings widget.
 
 ### Customize Meeting Controls
@@ -124,18 +112,17 @@ Use `layout="focus"` as prop value in Meetings widget.
 Developers can customize the meeting controls used by the Meetings widget.
 The Webex Meetings Widget takes an optional function to specify a custom list of controls for a meeting and an optional range to specify which controls can be collapsed if not enough space is available.
 
-The `controls` prop is a function that receives a boolean parameter which is `true` when the meeting is _in-meeting_.
-It should return an array of control names (strings) to display on the corresponding state of the meeting (in-meeting or else).
-The default control names are:
+#### Meeting Controls when In Meeting
 
-* When meeting is _in-meeting_:
   * `mute-audio`
   * `mute-video`
   * `share-screen`
   * `member-roster`
   * `settings`
   * `leave-meeting`
-* When meeting is _not joined_ (e.g. interstitial section)
+ 
+#### Meeting Controls when Not Joined yet
+
   * `mute-audio`
   * `mute-video`
   * `settings`
