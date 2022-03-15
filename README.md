@@ -21,6 +21,8 @@
   - [Customize Meeting Controls](#customize-meeting-controls)
     - [Meeting Controls when In Meeting](#meeting-controls-when-in-meeting)
     - [Meeting Controls when Not Joined yet](#meeting-controls-when-not-joined-yet)
+- [Share screen compatible browsers](#share-screen-compatible-browsers)
+- [Contact](#contact)
 
 ## Usage with CDN Links
 
@@ -127,3 +129,11 @@ The Webex Meetings Widget takes an optional function to specify a custom list of
   * `mute-video`
   * `settings`
   * `join-meeting`
+
+## Share screen compatible browsers
+
+Due to the use of the getDisplayMedia(), screen sharing is not available on mobile browsers and on Internet Explorer browser.\
+It is [available on the following browsers](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#browser_compatibility): Chrome (v>=72), Edge (v>=79), Firefox (v>=66), Opera (v>=60), Safari (v>=13).
+
+## Contact
+Please contact us at wxsd@external.cisco.com
