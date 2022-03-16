@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
 
- import {WebexMeetingsWidget} from '@webex/widgets';
+import {WebexMeetingsWidget} from '@webex/widgets';
 import '@webex/widgets/dist/css/webex-widgets.css';
 import './meeting-widget.css';
 
