@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Webex Widget Demo</title>
+    <link href="./node_modules/@webex/widgets/dist/css/webex-widgets.css" />
+    
+  </head>
+
+  <body>
+    <div id="embeddable-meetings-widget"></div>
+  <script src="bundle.js"></script>
+  <script>
+  webexMeetingsWidget({accessToken: "xxx",
+      meetingDestination: "xxx",
+      theme:"light",
+      width:"700px",
+      height:"500px",
+      layout:"Grid",
+      draggable: false,
+      inMeetingControls:['mute-audio','leave-meeting'],
+      interstitialControls:['join-meeting']});
+</script>
+  </body>
+</html>
