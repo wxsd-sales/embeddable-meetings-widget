@@ -39,7 +39,7 @@ This project enables the user to embed the webex meetings widget with just a few
 - Due to the use of the getDisplayMedia(), screen sharing is not available on mobile browsers and on Internet Explorer browser.
    - It is [available on the following browsers](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#browser_compatibility): Chrome (v>=72), Edge (v>=79), Firefox (v>=66), Opera (v>=60), Safari (v>=13).
 
-###Usage
+### Usage
 
 Using our CDN requires the least amount of work to get started. Add the following into your HTML file in the head section:
 
@@ -198,4 +198,4 @@ All contents are licensed under the MIT license. Please see [license](LICENSE) f
 
 
 ## Questions
-Please contact the WXSD team at [wxsd@external.cisco.com](mailto:wxsd@external.cisco.com?subject=meetings-widget-code-generator-demo) for questions. Or, if you're a Cisco internal employee, reach out to us on the Webex App via our bot (globalexpert@webex.bot). In the "Engagement Type" field, choose the "API/SDK Proof of Concept Integration Development" option to make sure you reach our team. 
+Please contact the WXSD team at [wxsd@external.cisco.com](mailto:wxsd@external.cisco.com?subject=embeddable-meetings-widget) for questions. Or, if you're a Cisco internal employee, reach out to us on the Webex App via our bot (globalexpert@webex.bot). In the "Engagement Type" field, choose the "API/SDK Proof of Concept Integration Development" option to make sure you reach our team. 
