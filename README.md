@@ -5,13 +5,10 @@ Welcome to our WXSD DEMO Repo! <!-- Keep this here -->
 
 This project enables the user to embed the webex meetings widget with just a few lines of HTML code. Before this, if the user has to embed the webex meetings widget, he was able to do it only using react code. Now we have created CDN link for <a href="https://developer.webex.com/docs/widgets#meetings-widget-"><strong>Webex Meetings Widget</strong></a> which allows developers to easily include Webex meetings functionality into your application.
 
+[![Meetings Widget with CDN link Video Demo](assets/Main_image.PNG)](https://youtu.be/clXqUCYBJnA, "Meetings Widget with CDN link Video Demo")
 
-<!-- Keep the following here -->  
- *_Everything included is for demo and Proof of Concept purposes only. Your use of the site is solely at your own risk. This site may contain links to third party content, which we do not warrant, endorse, or assume liability for. These demos are for Cisco Webex usecases, but are not Official Cisco Webex Branded demos._
- 
 ## Table of Contents
 
-- [Video Demo](#video-demo)
 - [Usage with CDN Link](#usage-with-CDN-links)
 - [Properties](#properties)
   - [Access Tokens](#access-tokens)
@@ -27,15 +24,22 @@ This project enables the user to embed the webex meetings widget with just a few
   - [Customize Meeting Controls](#customize-meeting-controls)
     - [Meeting Controls when In Meeting](#meeting-controls-when-in-meeting)
     - [Meeting Controls when Not Joined yet](#meeting-controls-when-not-joined-yet)
-- [Share screen compatible browsers](#share-screen-compatible-browsers)
-- [Contact](#contact)
+- [Demo](#demo)
+- [License](#license)
+-[Disclaimer](#disclaimer)
+-[Questions](#questions)
 
-
-## Video Demo
-
-[![Meetings Widget with CDN link Video Demo](assets/Main_image.PNG)](https://youtu.be/clXqUCYBJnA, "Meetings Widget with CDN link Video Demo")
 
 ## Usage with CDN Links
+
+### Prerequisites & Dependencies: 
+
+- Developed and tested on MacOs Ventura(13.2.1) and Windows 11
+- React version >17.0.2 (recommended)
+- Due to the use of the getDisplayMedia(), screen sharing is not available on mobile browsers and on Internet Explorer browser.
+   - It is [available on the following browsers](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#browser_compatibility): Chrome (v>=72), Edge (v>=79), Firefox (v>=66), Opera (v>=60), Safari (v>=13).
+
+###Usage
 
 Using our CDN requires the least amount of work to get started. Add the following into your HTML file in the head section:
 
@@ -173,10 +177,25 @@ The Webex Meetings Widget takes an optional function to specify a custom list of
   * `settings`
   * `join-meeting`
 
-## Share screen compatible browsers
+## Demo
 
-Due to the use of the getDisplayMedia(), screen sharing is not available on mobile browsers and on Internet Explorer browser.\
-It is [available on the following browsers](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#browser_compatibility): Chrome (v>=72), Edge (v>=79), Firefox (v>=66), Opera (v>=60), Safari (v>=13).
+<!-- Insert link to the website below (if deployed). -->
+Check out our live demo, available [here](<https://youtu.be/clXqUCYBJnA>)!
 
-## Contact
-Please contact us at wxsd@external.cisco.com
+<!-- Keep the following statement -->
+*For more demos & PoCs like this, check out our [Webex Labs site](https://collabtoolbox.cisco.com/webex-labs).
+
+## License
+<!-- MAKE SURE an MIT license is included in your Repository. If another license is needed, verify with management. This is for legal reasons.--> 
+
+<!-- Keep the following statement -->
+All contents are licensed under the MIT license. Please see [license](LICENSE) for details.
+
+
+## Disclaimer
+<!-- Keep the following here -->  
+ Everything included is for demo and Proof of Concept purposes only. Use of the site is solely at your own risk. This site may contain links to third party content, which we do not warrant, endorse, or assume liability for. These demos are for Cisco Webex usecases, but are not Official Cisco Webex Branded demos.
+
+
+## Questions
+Please contact the WXSD team at [wxsd@external.cisco.com](mailto:wxsd@external.cisco.com?subject=meetings-widget-code-generator-demo) for questions. Or, if you're a Cisco internal employee, reach out to us on the Webex App via our bot (globalexpert@webex.bot). In the "Engagement Type" field, choose the "API/SDK Proof of Concept Integration Development" option to make sure you reach our team. 
