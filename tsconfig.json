@@ -2,13 +2,13 @@
   "strict": true,
   "include": ["./src/*"],
   "compilerOptions": {
-    "lib": ["dom", "es2015"],
+    "lib": ["dom", "es2015", "es2016", "es2017", "es2018", "es2019"],
     "jsx": "react",
     "paths": {
       "zlib": ["../node_modules/browserify-zlib/lib/index.js"]
     },
     "skipLibCheck": true,
     "baseUrl": ".",
-    "esModuleInterop": true
+    "typeRoots": ["node_modules/@types"]
   }
 }
